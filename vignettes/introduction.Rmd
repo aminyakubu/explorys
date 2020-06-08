@@ -1,0 +1,35 @@
+---
+title: "introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(explorys)
+```
+
+Connecting to the database is straightforward. Just pass in your username and password to the connect_to_data function 
+
+```{r connect}
+sm = connect_to_data(username = "XXXX", 
+                     password = "XXXX")
+```
+
+Getting demographics is also simple. 
+
+```{r demographics}
+demographics = get_demographics(supermart = "supermart_xxx", 
+                                sandbox = "sandbox_xxx", 
+                                cohort = 'hypertension_cohort')
+```
+
