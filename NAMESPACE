@@ -3,3 +3,4 @@
 export(connect_to_data)
 export(drop)
 export(get_demographics)
+export(table_results)
