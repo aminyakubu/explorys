@@ -21,7 +21,7 @@ library(explorys)
 Connecting to the database is straightforward. Just pass in your username and password to the connect_to_data function 
 
 ```{r connect}
-sm = connect_to_data(username = "XXXX", 
+connect_to_data(username = "XXXX", 
                      password = "XXXX")
 ```
 

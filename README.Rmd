@@ -1,0 +1,16 @@
+---
+output: github_document
+---
+
+# Explorys 
+
+Explorys database is pretty standard and there are a few functions to allow you to easy get patient demographics and clinical characteristics like diagnosis and medications. 
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/) with
+
+```{r}
+devtools::install_github("aminyakubu/explorys")
+```
+
