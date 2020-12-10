@@ -3,4 +3,6 @@
 export(connect_to_data)
 export(drop)
 export(get_demographics)
+export(get_diagnosis)
+export(get_drugs_string)
 export(table_results)

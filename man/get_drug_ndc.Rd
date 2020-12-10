@@ -4,16 +4,8 @@
 \alias{get_drug_ndc}
 \title{Get a dataset with flags indicating if patient has a medication or not using NDC codes}
 \usage{
-get_drug_ndc(
-  supermart,
-  sandbox,
-  cohort,
-  drug_list_df,
-  ndc_col,
-  grouping_col,
-  index_col,
-  date_condition
-)
+get_drug_ndc(supermart, sandbox, cohort, drug_list_df, ndc_col,
+  grouping_col, index_col, date_condition)
 }
 \arguments{
 \item{supermart}{Name of the supermart where the data is stored. Eg. supermart_392}

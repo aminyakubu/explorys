@@ -11,15 +11,16 @@ get_demographics(supermart, sandbox, cohort)
 
 \item{sandbox}{Name of the writable location usually sandbox where cohort is saved}
 
-\item{cohort}{Name of the cohort with explorys_patient_id's and index dates. Must be called index_dt}
+\item{cohort}{Name of the cohort with explorys_patient_id's}
 }
 \value{
-A dataframe with flags of counts of demographic variables
+A dataframe with flags of counts/data of demographic variables
 }
 \description{
-This function takes in the cohort with ids and index date and outputs the demographic characteristics like gender, age and 
-and groups, insurance, race/ethnicity. It assumes the cohort has variables called index_dt and explorys_patient_id. 
-Always make sure those 2 variables exists with the exact same names.
-The results are aggregated from the entire history of patients existence in the database. So for example if a patient reports 
-Medicare as their insurance at some point in time and later reports Medicaid, they will be counted in both categories.
+This function takes in the cohort with ids and outputs the demographic characteristics like gender, birth year and
+insurance, race/ethnicity. It assumes the cohort has id variable explorys_patient_id.
+Always make sure thisse variable exists with the exact same name.
+The results are aggregated from the entire history of patients existence in the database. So for example if a patient reports
+Medicare as their insurance at some point in time and later reports Medicaid, they will be in both insurance categories as the demographic table
+doesn't incorporate (not possible to tell when the insurance information was recorded)
 }

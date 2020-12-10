@@ -4,16 +4,8 @@
 \alias{get_diagnosis}
 \title{Get a dataset with flags indicating if patient has a diagnosis}
 \usage{
-get_diagnosis(
-  supermart,
-  sandbox,
-  cohort,
-  dx_codes_df,
-  dx_codes_col,
-  grouping_col,
-  index_col,
-  date_condition
-)
+get_diagnosis(supermart, sandbox, cohort, dx_codes_df, dx_codes_col,
+  grouping_col, index_col, date_condition, extra_grouping_vars = "")
 }
 \arguments{
 \item{supermart}{Name of the supermart where the data is stored. Eg. supermart_392}
@@ -21,6 +13,19 @@ get_diagnosis(
 \item{sandbox}{Name of the writable location usually sandbox where cohort is saved}
 
 \item{cohort}{Name of the cohort with explorys_patient_id's.}
+
+\item{dx_codes_col}{Name of the column in the dx_codes_df specified. This column has the icd9/10/snomed codes}
+
+\item{grouping_col}{Name of the column that has the groups of medications of interest}
+
+\item{index_col}{Name of the column with the index dates}
+
+\item{date_condition}{The sql format date condition. For example "DATE(diagnosis_date) BETWEEN '2019-01-01' AND '2020-01-01'"}
+
+\item{extra_grouping_vars}{Character string of additional variables separated by comma to grouping variables}
+}
+\value{
+A dataframe with indicators of diagnoses
 }
 \description{
 This function provides a dataframe with flags indicating if a patient has a diagnosis or not based on icd9, icd10 and snomed codes.
